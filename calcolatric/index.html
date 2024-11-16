@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>calcolatrice online</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+  <div id="calcolatrice">
+    <input id="schermo" readonly>
+    <div id="pulsanti">
+      <button class="operatore" onclick="Pulisci()">C</button>
+      <button class="operatore" onclick="Scrivi('(')">(</button>
+      <button class="operatore" onclick="Scrivi(')')">)</button>
+      <button class="operatore" onclick="Scrivi('/')">/</button>
+      <button onclick="Scrivi('7')">7</button>
+      <button onclick="Scrivi('8')">8</button>
+      <button onclick="Scrivi('9')">9</button>
+      <button class="operatore" onclick="Scrivi('*')">*</button>
+      <button onclick="Scrivi('4')">4</button>
+      <button onclick="Scrivi('5')">5</button>
+      <button onclick="Scrivi('6')">6</button>
+      <button class="operatore" onclick="Scrivi('-')">-</button>
+      <button onclick="Scrivi('1')">1</button>
+      <button onclick="Scrivi('2')">2</button>
+      <button onclick="Scrivi('3')">3</button>
+      <button class="operatore" onclick="Scrivi('+')">+</button>
+    </div>
+
+    <div id="end">
+      <button id="zero" onclick="Scrivi('0')">0</button>
+      <button class="operatore" onclick="Scrivi('.')">.</button>
+      <button class="operatore" onclick="Calc()">=</button>
+    </div>
+  </div>
+<body>
+
+  <script>
+    const schermo = document.getElementById('schermo')
+
+    function Scrivi(input) {
+      schermo.value += input
+    }
+
+    function Pulisci() {
+      schermo.value = ""
+    }
+
+    function Calc() {
+      try{
+        schermo.value = eval(schermo.value)
+      }
+
+      catch (error) {
+        schermo.value = "errore"
+      }
+    }
+  </script>
+
+</body>
+
+</html>
