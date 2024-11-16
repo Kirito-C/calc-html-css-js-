@@ -32,6 +32,19 @@ body{
   padding: 25px;
 }
 
+#zero{
+  width: 210px;
+  height: 100px;
+  border-radius: 50px;
+  border: none;
+  background-color: hsl(0, 0%, 45%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  grid-column: span 1; // o span 1
+}
+
 button{
   width: 100px;
   height: 100px;
@@ -50,19 +63,6 @@ button:hover{
 
 button:active{
   background-color: hsl(0, 0%, 65%);
-}
-
-#zero{
-  width: 210px;
-  height: 100px;
-  border-radius: 50px;
-  border: none;
-  background-color: hsl(0, 0%, 45%);
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  cursor: pointer;
-  grid-column: span 2; // o span 1
 }
 
 .operatore{
